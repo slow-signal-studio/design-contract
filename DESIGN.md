@@ -46,8 +46,9 @@ All tripwire thresholds are tunable values declared in this file; adjusting them
 ## SITE LAYER (royamonty.com)
 
 ### Hard assertions
-- ground: page background is #F2EEE3. Why: warm paper neutral gives editorial physicality; the frame stays quiet because the work is colorful.
+- ground: page background is #F5F3EB. Why: warm paper neutral gives editorial physicality; the frame stays quiet because the work is colorful. Amended from #F2EEE3: chosen on sight against the draft value; site's lived ground wins, same precedent as underline offset.
 - ink: #1A1A1A carries all information in global UI.
+- muted-ink: one muted step #5A5A55 for secondary text (AA-verified 6:1 on ground); it recedes, ink informs; no second muted tone exists. #8A8A82 removed: 3.2:1 on ground fails AA at text sizes.
 - no-global-accent: there is no global accent color. Why (recorded so it is not relitigated): the projects supply the color; an accent would compete with the work and turn the site busy. Color belongs to project content and explicitly art-directed project treatments only.
 - interaction-spec: text links stay #1A1A1A, identified without color by persistent underline (start 1px thickness, 3px text-underline-offset, optically tuned per typeface); hover changes the underline (thickness up or offset down), opacity may supplement but never solely signal; focus is 2px solid #1A1A1A outline, 3px offset, via :focus-visible, never removed without a designed replacement; interactive icons and controls stay in ink, hover by opacity, underline, inversion, or displacement; disabled reduces ink opacity; no chromatic hover, active, visited, selection, or focus state anywhere in global UI.
 - interaction-hard-checks: no default browser-blue links or focus rings; :visited identical to link ink (no browser purple); all keyboard-focusable controls expose a visible :focus-visible state; focus indicator meets 3:1 non-text contrast against adjacent colors; links distinguishable without color; a state needed for comprehension never relies on opacity alone.
@@ -76,6 +77,7 @@ For each rule above that isn't self-evident, one line on WHY, because rules with
 - one-red-element: attention is a budget; two alerts is zero alerts
 - motion 8px/180ms: 8px makes state change perceptible without turning movement into spectacle; 180ms keeps direct interaction feeling immediate while the transition stays readable
 - no-global-accent: recorded in the site layer; the work supplies the color, the frame declines to compete
+- dark-section palette (obsidian/graphite/sand family) removed as aspiration-drift; a future dark scope requires its own registered mini-contract
 - OPEN DECISION (dated 2026-08-27, decide after Monday applications ship): Newsreader + warm ground + sparse black sits close to Anthropic's visual territory at the system level. First response is compositional, not typographic: push the behaviors already in the signature clauses (abrupt scale shifts, tighter display leading, asymmetric placement, annotation collisions). If resemblance persists after that, run the display-face exercise: 3-5 candidates chosen to break the resemblance while holding with Inter and JetBrains Mono. Ground and ink do not change.
 - [FILL as you go; incomplete is fine, absent is not]
 
