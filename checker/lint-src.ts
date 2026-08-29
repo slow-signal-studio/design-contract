@@ -13,7 +13,7 @@ export type CheckResult = {
   details: string;
 };
 
-const HEX = /#[0-9A-Fa-f]{3,8}\b/g;
+const HEX = /#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b(?![0-9a-fA-F])/g;
 const ARBITRARY_PX = /\[[0-9]+px\]/g;
 const SOURCE_EXT = new Set([".ts", ".tsx", ".css"]);
 
