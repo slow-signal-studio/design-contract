@@ -13,7 +13,7 @@ Two kinds of rules: HARD (machine-checkable assertion, exact value or threshold)
 - motion: entrance transitions are 8px translate + fade, 180ms, ease-out; no other entrance styles
 - tokens: typography, layout spacing, and recurring dimensional relationships come from named CSS custom properties in rem (e.g. --type-body: 1rem; --leading-body: 1.55; --space-title-body: 0.75rem; --space-paragraph: 1.5rem; --space-entry: 4rem; --space-section: 6rem). Raw values in these categories are a hard FAIL unless listed in EXCEPTIONS below. Borders, hairlines, transforms, shadows, animation geometry are outside token scope.
 - assertion-format: every numeric render assertion states Target and Acceptable (e.g. body leading Target 1.55, Acceptable 1.50-1.65; measure Target 62-66ch, Acceptable 58-70ch). Exact-match assertions are forbidden.
-- type-roles: micro JetBrains Mono 0.6875rem/1.3 (optical exception only, never essential info); meta/nav 0.75rem/1.4; body Inter 1rem/1.55; entry title Newsreader 1.5-1.75rem/1.1-1.15; page display Newsreader 2.25-3rem/1.0-1.1; hero clamp() with explicit min and max
+- type-roles: micro JetBrains Mono 0.6875rem/1.3 (optical exception only, never essential info); meta/nav 0.75rem/1.4, metadata and labels set in Inter; JetBrains Mono is reserved for figure annotation labels and code, never page metadata; body Inter 1rem/1.55; entry title Newsreader 1.5-1.75rem/1.1-1.15; page display Newsreader 2.25-3rem/1.0-1.1; hero clamp() with explicit min and max
 - type-minimum: 0.75rem floor for navigation, metadata, dates, labels; 0.6875rem only for sparse uppercase mono eyebrows carrying secondary info
 - spacing-scale: 4px grid expressed as rem tokens; semantic tokens by relationship, not freely chosen values
 - two-tier verification: source lint enforces token discipline and the exception registry; render checks verify computed outcomes within Acceptable ranges across breakpoints
@@ -78,6 +78,7 @@ For each rule above that isn't self-evident, one line on WHY, because rules with
 - motion 8px/180ms: 8px makes state change perceptible without turning movement into spectacle; 180ms keeps direct interaction feeling immediate while the transition stays readable
 - no-global-accent: recorded in the site layer; the work supplies the color, the frame declines to compete
 - dark-section palette (obsidian/graphite/sand family) removed as aspiration-drift; a future dark scope requires its own registered mini-contract
+- mono scope (dated 2026-08-29): mono metadata reads as tool-default terminal register; dates in the text face read editorial; verdict by eye on live site
 - OPEN DECISION (dated 2026-08-27, decide after Monday applications ship): Newsreader + warm ground + sparse black sits close to Anthropic's visual territory at the system level. First response is compositional, not typographic: push the behaviors already in the signature clauses (abrupt scale shifts, tighter display leading, asymmetric placement, annotation collisions). If resemblance persists after that, run the display-face exercise: 3-5 candidates chosen to break the resemblance while holding with Inter and JetBrains Mono. Ground and ink do not change.
 - [FILL as you go; incomplete is fine, absent is not]
 
