@@ -1,0 +1,9 @@
+[project]
+name = "design-contract-analysis"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.2",
+  "matplotlib>=3.9",
+  "scipy>=1.13",
+]

@@ -4,3 +4,4 @@ evidence/
 variants/
 node_modules/
 .DS_Store
+analysis/.venv/
